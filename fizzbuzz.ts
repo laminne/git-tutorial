@@ -1,3 +1,7 @@
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 for (let i = 1;; i++) {
   if (i % 3 === 0 && i % 5 === 0) {
     console.log("FizzBuzz");
@@ -8,4 +12,5 @@ for (let i = 1;; i++) {
   } else {
     console.log(i);
   }
+  await sleep(1000); // 1秒待機
 }
